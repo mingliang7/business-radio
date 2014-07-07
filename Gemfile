@@ -17,6 +17,8 @@ gem 'fog'
 gem 'aws-sdk'
 gem 'mini_magick'
 gem "will_paginate-bootstrap"
+gem  "nested_form"
+
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

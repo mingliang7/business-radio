@@ -124,6 +124,7 @@ GEM
     momentjs-rails (2.5.1)
       railties (>= 3.1)
     multi_json (1.10.1)
+    nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
@@ -215,6 +216,7 @@ DEPENDENCIES
   less-rails-bootstrap
   mini_magick
   momentjs-rails (~> 2.5.0)
+  nested_form
   rails (= 4.1.2.rc2)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

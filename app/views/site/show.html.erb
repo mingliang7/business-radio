@@ -1,36 +1,19 @@
 <div class="show-page">
-	<h6><%= @post.title %></h6>
-	<p>ផ្សាយដោយ: <%= @post.user.username if @post.user %>
+<% @thumbnail.posts.each do |post|%>
+	<h6><%= post.title %></h6>
+	
 		<span>
-		<% if @post.created_at > Time.now.beginning_of_day %>
-			<%="#{time_ago_in_words(@post.created_at)} ago"%> 
+		<% if post.created_at > Time.now.beginning_of_day %>
+			<%="#{time_ago_in_words(post.created_at)} ago"%> 
 		<% else %> 
-			<%= @post.created_at.strftime("%b %d, %Y") %>
+			<%= post.created_at.strftime("%b %d, %Y") %>
 		<% end %>
 		</span>
 	</p>
-	<div class="image"><%= image_tag @post.image %></div>
-	<div class="desc"><%= @post.description %></div>
-</div>
-<div class="last-news">
-	<p>អត្ថបទថ្មីៗ​</p>
-	<div class="dialog dialog-info">
-		<% @news.each do |n| %>
-		<%= link_to site_show_path(post_id: n) do%>
-			<ul>
-				<span class="glyphicon glyphicon-hand-right"></span> &nbsp;<%= truncate(n.title,length: 70) %>
-				<div class="align-time" style="float:right;">
-				<% if n.created_at > Time.now.beginning_of_day %>
-					<%="#{time_ago_in_words(n.created_at)} ago"%> 
-				<% else %> 
-					<%= n.created_at.strftime("%b %d, %Y") %>
-				<% end %>
-				</div>
-			</ul>
-		<% end %>
-		<% end %>
-	</div>
-</div>
+	<div class="image"><%= image_tag post.image, size: "360x230"%></div>
+	<div class="desc"><%= post.description %></div>
+	<% end %>
+</div> 
 
 
  <div id="disqus_thread" style="margin-top:30px;"></div>
@@ -46,4 +29,4 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span></span> class="logo-disqus">Disqus</span></a>

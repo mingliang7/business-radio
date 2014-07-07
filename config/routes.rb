@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :thumbnails
+
   devise_for :users
   get 'site/index'
 
