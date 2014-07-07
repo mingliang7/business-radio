@@ -1,0 +1,184 @@
+@import url(http://fonts.googleapis.com/css?family=Fasthand);
+@import url(http://fonts.googleapis.com/css?family=Preahvihear);
+@import url(http://fonts.googleapis.com/css?family=Freehand);
+
+h1,h2,h3,h4,h5,h6{
+	margin-top: 0;
+}
+
+label{
+	line-height: 0.5;
+}
+.form-group{
+	margin-bottom: 10px;
+}
+.navbar{
+	background: #FFF;
+}
+.navbar-inverse {
+	border-bottom: 1px solid #eceeef;
+	.navbar-brand{
+		font-family: 'Fasthand', serif;
+		color:#444;
+		padding-top:25px;
+		padding-bottom: 25px;
+	}
+	.navbar-nav > li > a {
+		font-size:0.8em;
+		color:#444;
+		padding-top:25px;
+		padding-bottom: 25px;
+		font-family: 'Fasthand', serif;
+		&:hover{
+			// border-bottom: 2px solid #444;	
+		}
+	}
+
+}
+.control-remember{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.page-header{
+	margin-top: 0px;
+}
+.alert{
+	padding:5px 10px;
+	margin-bottom: 20;
+	
+	.close{
+		right: 0;
+		padding-right: 10px;
+	}
+}
+.alert-dismissable .close {
+	right: 0;
+}
+.col-lg-6{
+	margin-top: 0;
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom:10px;
+	.box{
+		height: 280px;
+		.box-img{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		.box-title{
+			margin-top: 5px;
+			font-size:0.8em;
+			line-height: 1.8;
+			font-family: 'Freehand', cursive;
+		}
+	}
+}
+.dialog{
+	margin-top: 0;
+	text-align: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.bottom-menu{
+	padding-top:30px;
+	padding-bottom: 0;
+}
+.show-page{
+	p{
+		margin-top: 0;
+		margin-bottom: 8px;
+		font-size:14px;
+		
+		span{
+			float: right;
+		}
+	}
+	h6{
+		word-wrap:break-word;
+		line-height: 1.8;
+		font-size:0.9em;
+		color:#d73b22;
+		font-family: 'Freehand', cursive;
+		margin-bottom: 5px;
+	}
+	.image{
+		margin-top: 0;
+		img{
+			width: 100%;
+		}
+	}
+	.desc{
+		margin-top:10px;
+	}
+}
+.sidebar{
+	img{
+		width: 100%;
+	}
+}
+.last-news{
+	margin-top: 50px;
+	p{
+		margin-bottom: 0;
+		font-family: 'Freehand', cursive;
+	}
+	.dialog{
+		padding-bottom: 10px;
+		a{
+			color:#777;
+			&:hover{
+				color:#d73b22;
+			}
+		}
+	}
+}
+.text-centered{
+	text-align: center;
+}
+.pagination ul li > a{
+	&:hover{
+		color: #FFF;
+	}
+}
+.log-in{
+	margin: 0px auto;
+}
+.contact-form{
+	p{
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+
+.news{
+	.col-lg-12{
+		.col-lg-6{
+			.po-image{
+				width: 100%;
+				img{
+					width: 100%;
+				}
+			}
+			.po-title{
+				font-family: 'Freehand', cursive;
+				font-size:0.8em;
+				color:#d73b22;
+			}
+			.po-desc{
+				font-size:16px;
+				a{
+					color:#444;
+				}
+				
+			}
+		}
+	}
+}

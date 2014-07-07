@@ -1,0 +1,27 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "វិទ្យុកំពត", "#", :class => "navbar-brand" %>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "ទំព័រដើម", root_path %></li>
+          <li><%= link_to "ពត៌មាន", site_news_path %></li>
+          <li><%= link_to "អំពីយើង", site_about_path %></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+        <% if user_signed_in? %>
+          <li><%= link_to "ចាកចេញ", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "ចូល", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+</div>
