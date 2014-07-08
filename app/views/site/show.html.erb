@@ -1,5 +1,6 @@
 <div class="show-page">
 <% @thumbnail.posts.each do |post|%>
+
 	<h6><%= post.title %></h6>
 	
 		<span>
@@ -8,11 +9,16 @@
 		<% else %> 
 			<%= post.created_at.strftime("%b %d, %Y") %>
 		<% end %>
+
 		</span>
+		
 	</p>
-	<div class="image"><%= image_tag post.image, size: "360x230"%></div>
+		<%if(post.image).size != nil%>
+		<div class="image"><%= image_tag post.image, size: "360x230"%></div>
+		<% end %>
 	<div class="desc"><%= post.description %></div>
 	<% end %>
+
 </div> 
 
 
