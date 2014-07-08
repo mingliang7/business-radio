@@ -34,7 +34,8 @@
 <table id="tasks">
   <%= f.fields_for :posts, :wrapper => false do |post| %>
     <tr class="fields">
-      <td><%= post.text_field :description, :rows => 4 %></td>
+    <td><%= post.text_field :image %></td><tr>
+      <td><%= post.text_area :description, :rows => 4 %></td>
       <td><%= post.link_to_remove "Remove this task" %></td>
     </tr>
   <% end %>
