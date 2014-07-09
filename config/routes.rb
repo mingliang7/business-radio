@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
+  resources :advertisments
+
   resources :thumbnails
 
-  devise_for :users
-  get 'site/index'
+ devise_for :users, :skip => [:registrations]                                          
+       
 
-  get 'site/about'
+  get 'site/index', path: "home"
 
-  get 'site/news'
+  get 'site/about', path: "about"
+
+  get 'site/news', path: "news"
   
-  get 'site/show'
+  get 'site/show',path: "show"
 
-  resources :posts
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -15,4 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery_nested_form
+//= require bootstrap-wysihtml5
+//= require bootstrap-wysihtml5/locales/es-ES
+//= require bootstrap-wysihtml5/locales
 //= require_tree .
