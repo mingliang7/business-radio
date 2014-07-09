@@ -18,6 +18,6 @@ class SiteController < ApplicationController
   end
 
   def news
-    @thumbnails = Thumbnail.order("created_at DESC").paginate(page: params[:page],per_page: 4)
+    @thumbnails = Thumbnail.order("created_at DESC").paginate(page: params[:page],per_page: 15)
   end
 end

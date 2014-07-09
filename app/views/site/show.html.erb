@@ -1,8 +1,7 @@
-<div class="show-page">
+<div>
+<div class="show-page mar-t">
 
 <h6><%= @thumbnail.thumb_title %></h6>
-
-
 	<p style="color:#777;">ផ្សាយដោយ: <%= @thumbnail.user.username %>
 		<span>
 		<% if @thumbnail.created_at > Time.now.beginning_of_day %>
@@ -17,7 +16,7 @@
 <div class="desc"><%= @thumbnail.thumb_post.html_safe %></div>
 	<% @thumbnail.posts.each do |post|%>	
 		<div class="image"><%= image_tag post.image%></div>
-		<div class="desc"><%= post.description %></div>
+		<div class="desc"><%= post.description.html_safe %></div>
 	<% end %>
 </div> 
 
@@ -55,3 +54,6 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span></span> class="logo-disqus">Disqus</span></a>
+   </div>
+
+   		<%= render 'sidebar' %>
