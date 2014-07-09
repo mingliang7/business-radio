@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Fasthand);
 @import url(http://fonts.googleapis.com/css?family=Preahvihear);
-@import url(http://fonts.googleapis.com/css?family=Freehand);
+@import url(http://fonts.googleapis.com/css?family=Metal);
+@import url(http://fonts.googleapis.com/css?family=Chenla);
+
+
+
 
 h1,h2,h3,h4,h5,h6{
 	margin-top: 0;
@@ -18,7 +22,7 @@ label{
 .navbar-inverse {
 	border-bottom: 1px solid #eceeef;
 	.navbar-brand{
-		font-family: 'Fasthand', serif;
+		font-family: 'Chenla', cursive;
 		color:#444;
 		padding-top:25px;
 		padding-bottom: 25px;
@@ -28,7 +32,7 @@ label{
 		color:#444;
 		padding-top:25px;
 		padding-bottom: 25px;
-		font-family: 'Fasthand', serif;
+		font-family: 'Chenla', cursive;
 		&:hover{
 			// border-bottom: 2px solid #444;	
 		}
@@ -86,10 +90,11 @@ label{
 	padding-bottom: 0;
 }
 .show-page{
+	width: 760px;
 	p{
 		margin-top: 0;
 		margin-bottom: 8px;
-		font-size:14px;
+		font-size:15px;
 		
 		span{
 			float: right;
@@ -98,15 +103,15 @@ label{
 	h6{
 		word-wrap:break-word;
 		line-height: 1.8;
-		font-size:0.9em;
+		font-size:1.3em;
 		color:#d73b22;
 		font-family: 'Freehand', cursive;
 		margin-bottom: 5px;
 	}
 	.image{
-		margin-top: 0;
+		margin-top: 10px;
+		text-align: center;
 		img{
-			width: 100%;
 		}
 	}
 	.desc{
@@ -143,7 +148,7 @@ label{
 	}
 }
 .log-in{
-	margin: 0px auto;
+	margin: 50px auto;
 }
 .contact-form{
 	p{
@@ -162,15 +167,16 @@ label{
 	.col-lg-12{
 		.col-lg-6{
 			.po-image{
-				width: 100%;
 				img{
-					width: 100%;
 				}
 			}
 			.po-title{
 				font-family: 'Freehand', cursive;
-				font-size:0.8em;
 				color:#d73b22;
+				h6{
+					font-size:1em;
+					height: 1.8;
+				}
 			}
 			.po-desc{
 				font-size:16px;
@@ -182,3 +188,64 @@ label{
 		}
 	}
 }
+.mar-t{
+	margin-top: 40px;
+}
+.col-lg-4{
+	.image-ads{
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.radio-blog{
+	h6{
+		font-family: 'Chenla', cursive;
+		font-size: 1em;
+		
+	}
+	p#preview{
+		a{
+			display: none;
+		}
+	}
+}
+
+
+
+
+@media only screen and (max-width : 480px) {
+.bottom-menu{
+	display: none;
+}
+.navbar-header{
+	a{
+		color:#777;
+	}
+}
+.navbar-inverse {
+	border-bottom: 1px solid #eceeef;
+	.navbar-brand{
+		font-family: 'Chenla', cursive;
+		font-size: 1.2em;
+		color:#444;
+		padding-top:20px;
+		padding-bottom: 0px;
+		color:#777;
+	}
+	.navbar-nav > li > a {
+		font-size:0.8em;
+		color:#444;
+		padding-top:25px;
+		padding-bottom: 25px;
+		font-family: 'Chenla', cursive;
+		color:#777;
+		&:hover{
+			// border-bottom: 2px solid #444;	
+		}
+	}
+
+}
+}
+

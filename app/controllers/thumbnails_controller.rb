@@ -1,6 +1,6 @@
 class ThumbnailsController < ApplicationController
   before_action :set_thumbnail, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :unless => proc {|c| c.devise_controller?}
   # GET /thumbnails
   # GET /thumbnails.json
   def index
@@ -24,11 +24,11 @@ class ThumbnailsController < ApplicationController
   # POST /thumbnails
   # POST /thumbnails.json
   def create
-    @thumbnail = Thumbnail.new(thumbnail_params)
+    @thumbnail = current_user.thumbnails.new(thumbnail_params)
 
     respond_to do |format|
       if @thumbnail.save
-        format.html { redirect_to @thumbnail, notice: 'Thumbnail was successfully created.' }
+        format.html { redirect_to thumbnails_path, notice: 'Thumbnail was successfully created.' }
         format.json { render :show, status: :created, location: @thumbnail }
       else
         format.html { render :new }

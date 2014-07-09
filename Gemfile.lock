@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-wysihtml5-rails.git
+  revision: 3d75c784ece3d6218ea544f59a12fa9555446c30
+  specs:
+    bootstrap-wysihtml5-rails (0.3.2.100)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/decioferreira/bootstrap-generators.git
   revision: 41d35849737e7408be1c1ac7602251c4758aaa51
   specs:
@@ -131,6 +138,7 @@ GEM
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -145,6 +153,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.2.rc2)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.1.2.rc2)
       actionpack (= 4.1.2.rc2)
       activesupport (= 4.1.2.rc2)
@@ -204,6 +217,7 @@ DEPENDENCIES
   aws-sdk
   better_errors
   bootstrap-generators!
+  bootstrap-wysihtml5-rails!
   bootstrap3-datetimepicker-rails (~> 3.0.0.1)
   carrierwave
   coffee-rails (~> 4.0.0)
@@ -217,7 +231,9 @@ DEPENDENCIES
   mini_magick
   momentjs-rails (~> 2.5.0)
   nested_form
+  pg
   rails (= 4.1.2.rc2)
+  rails_12factor
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring

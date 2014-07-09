@@ -1,4 +1,5 @@
-<div class="page-header">
+<div class="page-header mar-t">
+<%= render "layouts/msg" %>
   <%= link_to new_thumbnail_path, :class => 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Thumbnail
@@ -7,22 +8,24 @@
 </div>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
+  <table class="table table-striped">
     <thead>
       <tr>
+            <th style="width:80px;">Thumb title</th>
             <th>Thumb post</th>
-            <th>Thumb title</th>
             <th>Thumb image</th>
             <th></th>
         <th></th>
         <th></th>
       </tr>
+      <tr>
+      <tr>
     </thead>
 
     <tbody>
       <%= content_tag_for(:tr, @thumbnails) do |thumbnail| %>
-            <td><%= thumbnail.thumb_post %></td>
             <td><%= thumbnail.thumb_title %></td>
+            <td><%= thumbnail.thumb_post %></td>
             <td><%= thumbnail.thumb_image %></td>
             <td><%= link_to 'Show', thumbnail %></td>
         <td><%= link_to 'Edit', edit_thumbnail_path(thumbnail) %></td>

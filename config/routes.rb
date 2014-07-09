@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
+  resources :advertisments
+
   resources :thumbnails
 
-  devise_for :users
-  get 'site/index'
+ devise_for :users, :skip => [:registrations]                                          
+       
 
-  get 'site/about'
+  get 'site/index', path: "home"
 
-  get 'site/news'
+  get 'site/about', path: "about"
+
+  get 'site/news', path: "news"
   
-  get 'site/show'
+  get 'site/show',path: "show"
 
   resources :posts
 
